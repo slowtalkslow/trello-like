@@ -20,9 +20,7 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### Take a look ✨
+## Take a look ✨
 
-[trello-like](https://trello-like.vercel.app/)
+clike  ✨ [trello-like](https://trello-like.vercel.app/)  ✨  to see what does the application look like
