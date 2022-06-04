@@ -6,8 +6,8 @@
       @click="toTask(task)"
       :transData="{
         type: 'task',
-        fromTaskIndex: taskIndex,
-        fromColumnIndex: columnIndex
+        fromColumnIndex: columnIndex,
+        fromTaskIndex: taskIndex
       }"
     >
       <span class="w-full flex-no-shrink font-bold">
@@ -21,10 +21,11 @@
 </template>
 
 <script>
-import movingTaskAndColumnMixin from '@/mixins/movingTaskAndColumnMixin'
 import AppDrag from './AppDrag'
 import AppDrop from './AppDrop'
+import movingTaskAndColumnMixin from '@/mixins/movingTaskAndColumnMixin'
 export default {
+  components: { AppDrag, AppDrop },
   mixins: [movingTaskAndColumnMixin],
   props: {
     task: {
@@ -35,10 +36,6 @@ export default {
       type: Number,
       required: true
     }
-  },
-  components: {
-    AppDrag,
-    AppDrop
   },
   methods: {
     toTask(task) {

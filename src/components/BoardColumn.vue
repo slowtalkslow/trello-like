@@ -30,16 +30,26 @@
 </template>
 
 <script>
-import ColumnTask from './ColumnTask'
-import movingTaskAndColumnMixin from '@/mixins/movingTaskAndColumnMixin'
 import AppDrag from './AppDrag'
 import AppDrop from './AppDrop'
+import ColumnTask from './ColumnTask'
+import movingTaskAndColumnMixin from '@/mixins/movingTaskAndColumnMixin'
 export default {
+  components: { ColumnTask, AppDrag, AppDrop },
   mixins: [movingTaskAndColumnMixin],
-  components: {
-    ColumnTask,
-    AppDrag,
-    AppDrop
+  props: {
+    board: {
+      type: Object,
+      required: true
+    },
+    columnIndex: {
+      type: Number,
+      required: true
+    },
+    column: {
+      type: Object,
+      required: true
+    }
   },
   methods: {
     createTask(event, tasks) {
