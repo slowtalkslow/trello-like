@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Take a look ✨
+
+[trello-like](https://trello-like.vercel.app/)
